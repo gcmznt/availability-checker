@@ -1,0 +1,16 @@
+{
+  "name": "esselunga",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "check": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-notifier": "^7.0.0",
+    "puppeteer": "^3.0.1"
+  }
+}
