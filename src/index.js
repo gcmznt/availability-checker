@@ -1,4 +1,5 @@
 const fs = require("fs");
+const https = require("https");
 const puppeteer = require("puppeteer");
 const notifier = require("node-notifier");
 
@@ -37,6 +38,9 @@ const notifier = require("node-notifier");
         ).length;
 
         if (availables) {
+          https.get(
+            `https://maker.ifttt.com/trigger/availability/with/key/${process.env.IFTTT}`
+          );
           notifier.notify(`🛒✅ Esselunga: ${availables} slots availables`);
         } else {
           notifier.notify(`🛒❌ Esselunga: No slots availables`);
